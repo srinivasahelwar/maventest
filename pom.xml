@@ -114,7 +114,7 @@
         <target>jenkins-server</target>
         <!-- One of: server, serverGroup, cluster: -->
         <targetType>server</targetType>
-        <environment>Production</environment>
+        <environment>Sandbox</environment>
     </configuration>
     <executions>
         <execution>
