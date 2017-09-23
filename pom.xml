@@ -110,7 +110,7 @@
     <configuration>
         <deploymentType>arm</deploymentType>
         <username>springonline2017</username>
-        <password>whyn0p@ssw0rd</password>
+        <password>Whyn0p@ssw0rd</password>
         <target>jenkins-server</target>
         <!-- One of: server, serverGroup, cluster: -->
         <targetType>server</targetType>
