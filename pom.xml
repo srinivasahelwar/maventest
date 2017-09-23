@@ -19,13 +19,17 @@
 	</properties>
 
 	<build>
+		
 		<plugins>
+		
 			<plugin>
+		
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
 				<version>${mule.tools.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					
 					<copyToAppsDirectory>true</copyToAppsDirectory>
 				</configuration>
 			</plugin>
@@ -34,6 +38,7 @@
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<version>1.7</version>
 				<executions>
+					
 					<execution>
 						<id>add-resource</id>
 						<phase>generate-resources</phase>
@@ -75,7 +80,7 @@
 					</coverage>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.0</version>
@@ -97,7 +102,30 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
+			<plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>2.0</version>
+    <configuration>
+        <deploymentType>arm</deploymentType>
+        <username>springonline2017</username>
+        <password>whyn0p@ssw0rd</password>
+        <target>jenkins-server</target>
+        <!-- One of: server, serverGroup, cluster: -->
+        <targetType>server</targetType>
+        <environment>Production</environment>
+    </configuration>
+    <executions>
+        <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
 		</plugins>
 		<testResources>
 			<testResource>
