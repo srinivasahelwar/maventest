@@ -104,28 +104,28 @@
 				</executions>
 			</plugin> -->
 			<plugin>
-    <groupId>org.mule.tools.maven</groupId>
-    <artifactId>mule-maven-plugin</artifactId>
-    <version>2.0</version>
-    <configuration>
-        <deploymentType>arm</deploymentType>
-        <username>springonline2017</username>
-        <password>Whyn0p@ssw0rd</password>
-        <target>jenkins-server</target>
-        <!-- One of: server, serverGroup, cluster: -->
-        <targetType>server</targetType>
-        <environment>Sandbox</environment>
-    </configuration>
-    <executions>
-        <execution>
-            <id>deploy</id>
-            <phase>deploy</phase>
-            <goals>
-                <goal>deploy</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>2.0</version>
+			    <configuration>
+			        <deploymentType>arm</deploymentType>
+			        <username>springonline2017</username>
+			        <password>Whyn0p@ssw0rd</password>
+			        <target>sriniserver</target>
+			        <!-- One of: server, serverGroup, cluster: -->
+			        <targetType>server</targetType>
+			        <environment>Sandbox</environment>
+			    </configuration>
+			    <executions>
+			        <execution>
+			            <id>deploy</id>
+			            <phase>deploy</phase>
+			            <goals>
+			                <goal>deploy</goal>
+			            </goals>
+			        </execution>
+    			</executions>
+			</plugin>
 		</plugins>
 		<testResources>
 			<testResource>
